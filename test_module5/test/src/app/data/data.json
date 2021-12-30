@@ -1,0 +1,52 @@
+{
+  "medical": [
+    {
+      "id": "BA-002",
+      "dayIn": "2021-02-23",
+      "dayOut": "2021-03-23",
+      "reason": "Ung thư",
+      "plan": "Xạ trị",
+      "doctor": "Tran Thi A",
+      "patient": {
+        "id": "BN-004",
+        "name": "Nguyen Van D"
+      }
+    },
+    {
+      "id": "BA-003",
+      "patient": {
+        "id": "BN-003",
+        "name": "Nguyen Van Cc"
+      },
+      "dayIn": "2019-02-23",
+      "dayOut": "2020-04-23",
+      "reason": "Ung thư",
+      "plan": "Xạ trị",
+      "doctor": "Tran Thi A"
+    },
+    {
+      "id": "BA-004",
+      "dayIn": "2020-06-23",
+      "dayOut": "2020-08-23",
+      "reason": "Ung thư",
+      "plan": "Xạ trị",
+      "doctor": "Tran Thi A",
+      "patient": {
+        "id": "BN-001",
+        "name": "Nguyen Van A"
+      }
+    },
+    {
+      "id": "BA-005",
+      "dayIn": "2020-06-23",
+      "dayOut": "2020-08-23",
+      "reason": "Ung thư",
+      "plan": "Xạ trị",
+      "doctor": "Tran Thi A",
+      "patient": {
+        "id": "BN-001",
+        "name": "Nguyen Van A"
+      }
+    }
+  ]
+}

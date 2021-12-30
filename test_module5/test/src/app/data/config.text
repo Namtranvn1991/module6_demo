@@ -1,0 +1,6 @@
+npm init
+npm install -g json-server
+json-server --watch data.json
+
+ng add @angular/material
+MatDialogModule

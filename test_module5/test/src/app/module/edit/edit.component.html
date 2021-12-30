@@ -1,0 +1,59 @@
+<div class="card">
+  <div class="card-body">
+    <form class="form-group" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div>
+        <label>Id:</label>
+        <input type="text" class="form-control" disabled placeholder="{{medical.id}}">
+      </div>
+      <div>
+        <label>Patient Id:</label>
+        <input type="text" class="form-control" disabled placeholder="{{medical.patient.id}}">
+      </div>
+      <div formGroupName="patient">
+        <label for="name">Patient name:</label>
+        <input type="text" name="dayIn" id="name" class="form-control" formControlName="name">
+        <small *ngIf="form.get('patient.name').errors?.pattern && (form.get('patient.name').touched || form.get('patient.name').dirty) "
+               class="text-warning fst-italic">Wrong format name!</small>
+        <small *ngIf="form.get('patient.name').errors?.required && (form.get('patient.name').touched || form.get('patient.name').dirty) "
+               class="text-warning fst-italic">Please fill out this field!</small>
+      </div>
+      <div>
+        <label for="dayIn">dayIn:</label>
+        <input type="date" name="dayIn" id="dayIn" class="form-control" formControlName="dayIn">
+      </div>
+      <div>
+        <label for="dayOut">dayOut:</label>
+        <input type="date" name="dayOut" id="dayOut" class="form-control" formControlName="dayOut">
+      </div>
+      <ng-container *ngIf="form.errors">
+        <small class="text-warning fst-italic">The date of admission must be before or equal to the date of discharge!</small>
+      </ng-container>
+      <div>
+        <label for="reason">reason:</label>
+        <textarea  type="textarea" name="reason" id="reason" class="form-control" formControlName="reason"></textarea>
+        <small *ngIf="form.controls.reason.errors?.required && (form.controls.reason.touched || form.controls.reason.dirty) "
+               class="text-warning fst-italic">Please fill out this field!</small>
+      </div>
+      <div>
+        <label for="plan">plan:</label>
+        <textarea  type="textarea" name="plan" id="plan" class="form-control" formControlName="plan"></textarea>
+        <small *ngIf="form.controls.plan.errors?.required && (form.controls.plan.touched || form.controls.plan.dirty) "
+               class="text-warning fst-italic">Please fill out this field!</small>
+      </div>
+      <div>
+        <label for="doctor">doctor:</label>
+        <input type="text" name="doctor" id="doctor" class="form-control" formControlName="doctor">
+        <small *ngIf="form.controls.doctor.errors?.required && (form.controls.doctor.touched || form.controls.doctor.dirty) "
+               class="text-warning fst-italic">Please fill out this field!</small>
+      </div>
+      <div class="mt-2">
+        <button class="btn-primary" type="submit" [disabled]="form.invalid">Submit</button>
+        <button class="btn-success" ><a routerLink="/medical">Back</a></button>
+      </div>
+
+    </form>
+  </div>
+
+</div>
+
+
