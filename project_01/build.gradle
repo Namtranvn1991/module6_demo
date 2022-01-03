@@ -20,6 +20,9 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '2.5.4'
+
+    // https://mvnrepository.com/artifact/com.google.firebase/firebase-admin
+    implementation group: 'com.google.firebase', name: 'firebase-admin', version: '6.8.1'
 }
 
 test {
